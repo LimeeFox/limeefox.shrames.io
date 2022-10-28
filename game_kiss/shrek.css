@@ -1,0 +1,101 @@
+html {
+
+    font-family: arial, sans-serif;
+    text-align: center;
+
+}
+
+body {
+
+    margin: 15px;
+    padding: 10px;
+    border: 5px ridge darkolivegreen;
+
+}
+
+img {
+    
+    width: 350px;
+    height: 350px;
+} 
+
+div {
+    display: inline-block;
+}
+
+#game {
+
+    margin: 15px;
+
+}
+
+article {
+
+    margin: 0 auto;
+    width: fit-content;
+
+}
+
+h2 {
+
+    border: 2px solid darkolivegreen;
+    border-radius: 12px;
+    padding: 5px;
+    width: fit-content;
+    margin: auto;
+
+}
+
+button {
+
+    width: 130px;
+    height:55px;
+
+}
+
+#warningSign {
+    width: 50px;
+    height: 50px;
+}
+
+#canvas {
+    border-color: black;
+    border-width: thick;
+}
+
+.box {
+    display: flex;
+}
+
+#onion {
+    position:relative;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+
+#shrek_onion {
+    position:relative;
+    width: 50px;
+    height: 50px;
+}
+
+#farquard {
+    position:relative;
+    width: 45px;
+    height: 90px;
+}
+
+#armour {
+    position:relative;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+}
+
+#swamp {
+    width: 1066px;
+    height: 600px;
+    background-image: url("media/swamp.jpg");
+    background-size: cover;
+}
