@@ -47,7 +47,7 @@ h2 {
 
 }
 
-button {
+button, input {
 
     padding: 5px;
     width: 130px;
