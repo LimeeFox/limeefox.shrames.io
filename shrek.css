@@ -98,6 +98,6 @@ button, input {
 #swamp {
     width: 1066px;
     height: 600px;
-    background-image: url("media/swamp.jpg");
+    background-image: url("../media/swamp.jpg");
     background-size: cover;
 }
