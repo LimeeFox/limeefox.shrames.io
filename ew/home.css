@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    font-family: 'minecraftia';
+    src: url('/fonts/Minecraftia-Regular.woff') format('woff'),
+         url('/fonts/Minecraftia-Regular.woff2') format('woff2'),
+         url('/fonts/Minecraftia-Regular.ttf') format('truetype');
+  }
+  
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    overflow: auto;
+}
+  
+header, footer {
+    width: 100%;
+    position: relative;
+}
+  
+header {
+    background-color: pink;
+}
+  
+footer {
+    background-color: crimson;
+}
+
+/*Slideshow + logo section*/
+#main-landing {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#logo, #background-section {
+    transition: transform 0.01s ease;
+}
+
+/*the actual website*/
+
+#info-page {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    width: 100%;
+    padding: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/stone.png');
+    background-repeat: repeat;
+    background-size: 64px;
+    font-family: minecraftia;
+}
+
+#main-container {
+    position: relative;
+    z-index: 2;
+    padding: 10vh 10%;
+}
+
+  
+#background-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+#slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+  
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: crossfade 65s linear infinite;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slide:nth-child(1) {
+    background-image: url('/background/minastirith0.png');
+}
+.slide:nth-child(2) {
+    animation-delay: 8s;
+    background-image: url('/background/helmsdeep0.png')
+}
+.slide:nth-child(3) {
+    animation-delay: 16s;
+    background-image: url('/background/grimslade1.png')
+}
+.slide:nth-child(4) {
+    animation-delay: 24s;
+    background-image: url('/background/edhellond0.png')
+}
+.slide:nth-child(5) {
+    animation-delay: 32s;
+    background-image: url('/background/edoras0.png')
+}
+.slide:nth-child(6) {
+    animation-delay: 40s;
+    background-image: url('/background/edhellond1.png')
+}
+.slide:nth-child(7) {
+    animation-delay: 48s;
+    background-image: url('/background/grimslade0.png')
+}
+.slide:nth-child(8) {
+    animation-delay: 56s;
+    background-image: url('/background/edhellond2.png')
+}  
+
+#logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+  
+.logo {
+    width: 800px;
+    height: auto;
+    animation: fadeIn 4s;
+}
+  
+@keyframes crossfade {
+    0% {opacity: 0;}
+    5.75% {opacity: 1}
+    12.5% {opacity: 1;}
+    25% {opacity: 0;}
+    37.5% {opacity: 0;}
+    50% {opacity: 0;}
+    62.5% {opacity: 0;}
+    75% {opacity: 0;}
+    87.5% {opacity: 0;}
+    100% {opacity: 0;}
+}
+  
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    25% {opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#divider-page {
+    background-image: url('/images/divider.png');
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40px;
+    z-index: 3;
+}
+
+/*
+The actual info page
+*/
+
+/*nothing to see yet u keksimus*/
+
+/*
+Navbar
+*/
+
+.navbar {
+    display: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: black;
+}
+
+.navbar a {
+    color: darkgrey;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: beige;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.navbar a:first-child {
+    margin-left: 0;
+}
+
+/*
+Footer
+*/
+
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+#footer-logo {
+    width: 70%;
+    height: auto;
+}
