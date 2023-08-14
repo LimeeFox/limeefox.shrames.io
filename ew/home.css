@@ -1,16 +1,41 @@
 * {
     box-sizing: border-box;
     color: white;
+    scrollbar-width: thin;
+    scrollbar-color: #263344 #608a81;
+}
+
+/* default image size */
+img {
+    width: 100%;
+    height: auto;
+}
+
+.col-md-6, .col-md-3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2, h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 @font-face {
     font-family: 'minecraftia';
-    src: url('/fonts/Minecraftia-Regular.woff') format('woff'),
-         url('/fonts/Minecraftia-Regular.woff2') format('woff2'),
-         url('/fonts/Minecraftia-Regular.ttf') format('truetype');
+    src: url('fonts/Minecraftia-Regular.woff') format('woff'),
+         url('fonts/Minecraftia-Regular.woff2') format('woff2'),
+         url('fonts/Minecraftia-Regular.ttf') format('truetype');
   }
   
-
+html {
+    scroll-behavior: smooth;
+}
+  
 body, html {
     height: 100%;
     margin: 0;
@@ -48,6 +73,53 @@ footer {
 
 /*the actual website*/
 
+#video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+/* The News Section */
+
+.card h3 {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#crafatar {
+    width: 60px;
+    height: 60px;
+}
+
+#news-title {
+    display: flex;
+    margin: 15px 0px 15px;
+}
+
+#card-text {
+    margin: 15px;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card p, .card h3 {
+    color: black;
+}
+
+/* end of news section */
+
 #info-page {
     position: relative;
     z-index: 3;
@@ -58,7 +130,7 @@ footer {
     min-width: 100%;
     width: 100%;
     padding: 0px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/images/stone.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/stone.png');
     background-repeat: repeat;
     background-size: 64px;
     font-family: minecraftia;
@@ -67,7 +139,7 @@ footer {
 #main-container {
     position: relative;
     z-index: 2;
-    padding: 10vh 10%;
+    padding: 10vh 0%;
 }
 
   
@@ -78,7 +150,8 @@ footer {
     width: 100%;
     height: 100%;
 }
-  
+
+/*
 #slideshow {
     position: absolute;
     width: 100%;
@@ -87,8 +160,26 @@ footer {
     filter: blur(3px);
     backdrop-filter: blur(3px);
 }
+*/
+
+#slideshow-mask {
+    overflow: hidden; /* Hide the parts of the child elements (the slideshow) that are outside this element */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
   
-.slide {
+#slideshow {
+    position: absolute;
+    width: calc(100% + 6px); /* Slightly bigger than its parent to have room for the blur effect */
+    height: calc(100% + 6px); /* Slightly bigger than its parent to have room for the blur effect */
+    left: -3px; /* Position it so that the blur effect on the left is hidden by the parent */
+    top: -3px; /* Position it so that the blur effect on the top is hidden by the parent */
+    filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+  
+.background_slide {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -100,36 +191,36 @@ footer {
     z-index: 0;
 }
 
-.slide:nth-child(1) {
-    background-image: url('/background/minastirith0.png');
+.background_slide:nth-child(1) {
+    background-image: url('background/minastirith0.png');
 }
-.slide:nth-child(2) {
+.background_slide:nth-child(2) {
     animation-delay: 8s;
-    background-image: url('/background/helmsdeep0.png')
+    background-image: url('background/helmsdeep0.png')
 }
-.slide:nth-child(3) {
+.background_slide:nth-child(3) {
     animation-delay: 16s;
-    background-image: url('/background/grimslade1.png')
+    background-image: url('background/grimslade1.png')
 }
-.slide:nth-child(4) {
+.background_slide:nth-child(4) {
     animation-delay: 24s;
-    background-image: url('/background/edhellond0.png')
+    background-image: url('background/edhellond0.png')
 }
-.slide:nth-child(5) {
+.background_slide:nth-child(5) {
     animation-delay: 32s;
-    background-image: url('/background/edoras0.png')
+    background-image: url('background/edoras.png')
 }
-.slide:nth-child(6) {
+.background_slide:nth-child(6) {
     animation-delay: 40s;
-    background-image: url('/background/edhellond1.png')
+    background-image: url('background/edhellond1.png')
 }
-.slide:nth-child(7) {
+.background_slide:nth-child(7) {
     animation-delay: 48s;
-    background-image: url('/background/grimslade0.png')
+    background-image: url('background/grimslade0.png')
 }
-.slide:nth-child(8) {
+.background_slide:nth-child(8) {
     animation-delay: 56s;
-    background-image: url('/background/edhellond2.png')
+    background-image: url('background/edhellond2.png')
 }  
 
 #logo {
@@ -166,11 +257,11 @@ footer {
 }
 
 #divider-page {
-    background-image: url('/images/divider.png');
-    background-repeat: repeat;
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/grass.png');
+    background-repeat: repeat-x;
+    background-size: 64px 64px;
     width: 100%;
-    height: 40px;
+    height: 64px;
     z-index: 3;
 }
 
@@ -178,12 +269,71 @@ footer {
 The actual info page
 */
 
-/*nothing to see yet u keksimus*/
+.info-container {
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.carousel-inner img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.about-factions {
+    margin: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+}
+
+.about-factions-paragraph {
+    font-size: 120%;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 150%;
+}
+
+.col-md-6 {
+    padding: 0px;
+}
+
+/*
+#server-banner {
+    width: 460px;
+    height: auto;
+}
+*/
+
+/*
+#about-factions-good {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 350px;
+    margin-bottom: 0px;
+}
+*/
+
+#ip-list {
+    margin-top: 6px;
+}
+
+#IPs {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+ul#IPs li::before {
+    content: "- ";
+}
 
 /*
 Navbar
 */
 
+/*
 .navbar {
     display: fixed;
     top: 0;
@@ -193,9 +343,28 @@ Navbar
     background-color: #333;
     color: black;
 }
+*/
+
+.navbar {
+    display: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+    background-color: transparent;
+    transition: background-color 0.5s ease; /* This is for smooth transition */
+    cursor: pointer;
+}
+
+.navbar.scrolled {
+    background-color: #1c1c1c;
+    color: black;
+    opacity: 95%;
+}
 
 .navbar a {
-    color: darkgrey;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     text-shadow: beige;
@@ -203,8 +372,25 @@ Navbar
     margin-left: 15px;
 }
 
+.navbar.scrolled a {
+    color: darkgray;
+}
+
+.navbar a:hover {
+    color: beige;
+    text-decoration: underline;
+}
+
+.navbar.scrolled a:hover {
+    color: beige;
+}
+
 .navbar a:first-child {
     margin-left: 0;
+}
+
+#navbar-logo {
+    width: 40px;
 }
 
 /*
@@ -227,6 +413,7 @@ footer {
 
 .footer-section {
     margin-bottom: 20px;
+    line-height: 210%;
 }
 
 .footer-section h3 {
@@ -253,7 +440,57 @@ footer a:hover {
     color: #ccc;
 }
 
+.discord-widget {
+    height: 400px;
+}
+
+.footer-section img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/*
 #footer-logo {
     width: 70%;
     height: auto;
+}
+*/
+
+/*
+.slick-next, .slick-prev {
+    display: none !important;
+}
+*/
+
+.slider .slick-slide {
+    opacity: 0.6;
+    transform: scale(0.8);
+}
+
+.slick-center {
+    opacity: 1;
+    transform: scale(2);
+}
+
+.slider img {
+    width: 550px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.slick-slide {
+    margin: 0 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#game-images {
+    padding: 35px 0px 35px;
+}
+
+#join-now {
+    padding: 35px 0px 35px;
+    align-items: center;
 }

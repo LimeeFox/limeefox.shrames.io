@@ -45,12 +45,12 @@
         return document.getElementById(id);
     }
 
-    window.addEventListener('keydown', (event) => { 
+    window.addEventListener('keyup', (event) => { 
         keyPressed[event.key] = true;
         posShrek(); 
     });
 
-    document.addEventListener('keyup', (event) => {
+    document.addEventListener('keydown', (event) => {
         delete this.keyPressed[event.key];
      });
 
