@@ -151,19 +151,8 @@ iframe {
     height: 100%;
 }
 
-/*
-#slideshow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    filter: blur(3px);
-    backdrop-filter: blur(3px);
-}
-*/
-
 #slideshow-mask {
-    overflow: hidden; /* Hide the parts of the child elements (the slideshow) that are outside this element */
+    overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
@@ -171,10 +160,10 @@ iframe {
   
 #slideshow {
     position: absolute;
-    width: calc(100% + 6px); /* Slightly bigger than its parent to have room for the blur effect */
-    height: calc(100% + 6px); /* Slightly bigger than its parent to have room for the blur effect */
-    left: -3px; /* Position it so that the blur effect on the left is hidden by the parent */
-    top: -3px; /* Position it so that the blur effect on the top is hidden by the parent */
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    left: -3px;
+    top: -3px;
     filter: blur(3px);
     backdrop-filter: blur(3px);
 }
@@ -191,36 +180,26 @@ iframe {
     z-index: 0;
 }
 
-.background_slide:nth-child(1) {
-    background-image: url('background/minastirith0.png');
-}
 .background_slide:nth-child(2) {
     animation-delay: 8s;
-    background-image: url('background/helmsdeep0.png')
 }
 .background_slide:nth-child(3) {
     animation-delay: 16s;
-    background-image: url('background/grimslade1.png')
 }
 .background_slide:nth-child(4) {
     animation-delay: 24s;
-    background-image: url('background/edhellond0.png')
 }
 .background_slide:nth-child(5) {
     animation-delay: 32s;
-    background-image: url('background/edoras.png')
 }
 .background_slide:nth-child(6) {
     animation-delay: 40s;
-    background-image: url('background/edhellond1.png')
 }
 .background_slide:nth-child(7) {
     animation-delay: 48s;
-    background-image: url('background/grimslade0.png')
 }
 .background_slide:nth-child(8) {
     animation-delay: 56s;
-    background-image: url('background/edhellond2.png')
 }  
 
 #logo {
@@ -366,7 +345,8 @@ Navbar
 .navbar a {
     color: black;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 950;
+    font-size: 18px;
     text-shadow: beige;
     margin-right: 15px;
     margin-left: 15px;
@@ -391,6 +371,31 @@ Navbar
 
 #navbar-logo {
     width: 40px;
+}
+
+#server-ip-button {
+    position: fixed;
+    top: 65px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    z-index: 1000; /* Make sure it's above other elements */
+}
+  
+#copy-button {
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+#alert-success {
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    outline: black;
 }
 
 /*

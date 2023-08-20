@@ -50,6 +50,17 @@
                             </li>
                         </ul>
                     </div>
+                    <div>
+                        <div id="server-ip-button">
+                            <span>Server IP: mc.empirewar.org</span>
+                            <button id="copy-button">Copy</button>
+                        </div>
+                        <!--
+                        <div class="alert alert-success" role="alert">
+                            <strong>IP copied to clipboard!</strong>
+                        </div>
+                        -->
+                    </div>
                 </div>
             </nav>
         </header>
@@ -58,14 +69,14 @@
             <div id="background-section">
                 <div id="slideshow-mask">
                     <div id="slideshow">
-                        <div class="background_slide" style="background-image: url('background/minastirith0.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/helmsdeep0.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/grimslade1.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/edhellond0.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/edoras.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/edhellond1.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/grimslade0.png');"></div>
-                        <div class="background_slide" style="background-image: url('background/edhellond2.png');"></div>
+                        <div class="background_slide" data-bg-url='background/minastirith0.png'></div>
+                        <div class="background_slide" data-bg-url='background/helmsdeep0.png'></div>
+                        <div class="background_slide" data-bg-url='background/grimslade1.png'></div>
+                        <div class="background_slide" data-bg-url='background/edhellond0.png'></div>
+                        <div class="background_slide" data-bg-url='background/edoras.png'></div>
+                        <div class="background_slide" data-bg-url='background/edhellond1.png'></div>
+                        <div class="background_slide" data-bg-url='background/grimslade0.png'></div>
+                        <div class="background_slide" data-bg-url='background/edhellond2.png'></div>
                     </div>
                 </div>
             </div>
@@ -79,18 +90,18 @@
             <div id="divider-page"></div>
 
             <div class="col-md-12 container" id="video-section">
-                <iframe src="https://www.youtube.com/embed/j8DuCO95A4U"></iframe>
+                <iframe data-src="https://www.youtube.com/embed/j8DuCO95A4U"></iframe>
             </div>
 
             <div id="main-container" class="container">
                 <div id="news" class="info-container">
                     <h1>Latest news:</h1>        
                     <div class="card col-md-6 offset-md-3">
-                        <img class="card-img-top" src="images/2023-07-14_15.41.09.png" alt="Card image cap">
+                        <img class="card-img-top" data-src="images/2023-07-14_15.41.09.png" alt="Card image cap">
                         <div class="card-body">
                             <div id="card-text">
                                 <div id="news-title">
-                                    <img src="images/cotander.png" id="crafatar" class="aligned-img">
+                                    <img data-src="images/cotander.png" id="crafatar" class="aligned-img">
                                     <h3 class="card-title">A new Age for Empire War</h3>
                                 </div> 
                                 <p class="card-text">
@@ -132,22 +143,22 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/2023-07-14_16.45.49.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_16.45.49.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/2023-07-14_16.40.26.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_16.40.26.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/2023-07-14_15.42.07.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_15.42.07.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/2023-07-14_15.48.32.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_15.48.32.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/2023-07-14_16.43.40.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_16.43.40.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/2023-07-14_15.41.09.png" class="d-block w-100" alt="Picture of Evil forces">
+                                        <img data-src="images/2023-07-14_15.41.09.png" class="d-block w-100" alt="Picture of Evil forces">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel1" data-bs-slide="prev">
@@ -171,13 +182,13 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/westfoldUpdate.png" class="d-block w-100" alt="Picture of Good forces">
+                                        <img data-src="images/westfoldUpdate.png" class="d-block w-100" alt="Picture of Good forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/grimsladePVP.png" class="d-block w-100" alt="Picture of Good forces">
+                                        <img data-src="images/grimsladePVP.png" class="d-block w-100" alt="Picture of Good forces">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="images/EWmeme.jpg" class="d-block w-100" alt="Picture of Good forces">
+                                        <img data-src="images/EWmeme.jpg" class="d-block w-100" alt="Picture of Good forces">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
@@ -200,49 +211,49 @@
                     <h1>Play Empire War - Battle through Middle-Earth!</h1>
                     <div class="slider center row" id="game-images">
                         <div class="play-now-slide">
-                            <img src="images/v3_helmsBattle.png" alt="">
+                            <img data-src="images/v3_helmsBattle.png" alt="Battle of Helm's Deep">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.37.58.png" alt="">
+                            <img data-src="images/2023-07-14_17.37.58.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.21.05.png" alt="">
+                            <img data-src="images/2023-07-14_17.21.05.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/v3_helmsBattle4.png" alt="">
+                            <img data-src="images/v3_helmsBattle4.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/v3_helmsBattle5.png" alt="">
+                            <img data-src="images/v3_helmsBattle5.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/v3_helmsBattle6.png" alt="">
+                            <img data-src="images/v3_helmsBattle6.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.19.04.png" alt="">
+                            <img data-src="images/2023-07-14_17.19.04.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_15.41.09.png" alt="">
+                            <img data-src="images/2023-07-14_15.41.09.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.11.39.png" alt="">
+                            <img data-src="images/2023-07-14_17.11.39.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-18_17.17.37.png" alt="">
+                            <img data-src="images/2023-07-18_17.17.37.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_15.52.32.png" alt="">
+                            <img daat-src="images/2023-07-14_15.52.32.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.06.36.png" alt="">
+                            <img data-src="images/2023-07-14_17.06.36.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-14_17.16.09.png" alt="">
+                            <img data-src="images/2023-07-14_17.16.09.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-19_12.37.40.png" alt="">
+                            <img data-src="images/2023-07-19_12.37.40.png" alt="">
                         </div>
                         <div class="play-now-slide">
-                            <img src="images/2023-07-16_21.10.42.png" alt="">
+                            <img data-src="images/2023-07-16_21.10.42.png" alt="">
                         </div>
                     </div>
 
@@ -255,7 +266,7 @@
                     
                     <div id="join-now" class="row">
                         <div class="col-md-6">
-                            <img src="images/banner.png" id="server-banner">
+                            <img data-src="images/banner.png" id="server-banner">
                         </div>
                         <div class="col-md-6 row">
                             <div>
@@ -281,11 +292,11 @@
                     <div class="col-md-4 footer-section">
                         <h3>Empire War Social</h3>
                         <ul>
-                            <li><a href="https://www.youtube.com/@EmpireWarSiege"><img src="images/youtube.ico" alt="YouTube"> YouTube</a></li>
-                            <li><a href="https://twitter.com/MCEmpireWar"><img src="images/twitter.ico" alt="Twitter"> Twitter</a></li>
-                            <li><a href="#"><img src="images/instagram.ico" alt="Instagram"> Instagram</a></li>
-                            <li><a href="https://www.planetminecraft.com/server/empire-war-1480239/"><img src="images/planetminecraft.ico" alt="Planet Minecraft"> Planet Minecraft</a></li>
-                            <li><a href="https://www.epicquestz.com/"><img src="images/epicquestz.ico" alt="EpicQuestz"> EpicQuestz</a></li>
+                            <li><a href="https://www.youtube.com/@EmpireWarSiege"><img data-src="images/youtube.ico" alt="YouTube"> YouTube</a></li>
+                            <li><a href="https://twitter.com/MCEmpireWar"><img data-src="images/twitter.ico" alt="Twitter"> Twitter</a></li>
+                            <li><a href="#"><img data-src="images/instagram.ico" alt="Instagram"> Instagram</a></li>
+                            <li><a href="https://www.planetminecraft.com/server/empire-war-1480239/"><img data-src="images/planetminecraft.ico" alt="Planet Minecraft"> Planet Minecraft</a></li>
+                            <li><a href="https://www.epicquestz.com/"><img data-src="images/epicquestz.ico" alt="EpicQuestz"> EpicQuestz</a></li>
                         </ul>
                     </div>                    
                     <div class="col-md-4 footer-section">
@@ -300,7 +311,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4 footer-section">
-                        <iframe src="https://discord.com/widget?id=209691919595470848&theme=dark" class="discord-widget"
+                        <iframe data-src="https://discord.com/widget?id=209691919595470848&theme=dark" class="discord-widget"
                             width="100%" 
                             height="50px"
                             allowtransparency="true" 
@@ -315,7 +326,7 @@
                     </div>
                 </div>
             </div>
-        </footer>  
+        </footer> 
         <script src="home.js"></script>  
     </body>
 </html>
