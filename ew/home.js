@@ -191,4 +191,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 lazyLoadBackgrounds();
 
-setInterval(lazyLoadBackgrounds, 3000);
+setInterval(lazyLoadBackgrounds, 4000);
+setTimeout(clearInterval, 33000)

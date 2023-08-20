@@ -441,8 +441,8 @@ footer {
     text-align: center;
 }
 
-footer a:hover {
-    color: #ccc;
+.footer-container a:hover {
+    text-decoration: underline;
 }
 
 .discord-widget {
@@ -457,12 +457,10 @@ footer a:hover {
 }
 
 
-/*
 #footer-logo {
     width: 70%;
     height: auto;
 }
-*/
 
 /*
 .slick-next, .slick-prev {
