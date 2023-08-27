@@ -148,25 +148,28 @@ $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", function() {
     let alertVisible = false;
 
-    document.getElementById("copy-button").addEventListener("click", function() {
+    document.getElementById("server-ip-button").addEventListener("click", function() {
         const textToCopy = "mc.empirewar.org";
         navigator.clipboard.writeText(textToCopy);
-        /*
-        navigator.clipboard.writeText(textToCopy).then(function() {
-            const alertDiv = document.getElementById("alert-success");
-            alertDiv.style.visibility = "visible";
-            alertVisible = true;
+        alertSuccess();
+    });
 
-            setTimeout(function() {
-                alertDiv.style.visibility = "hidden";
-                alertVisible = false;
-            }, 3000); // Hide after 3000 milliseconds (3 seconds)
-        }).catch(function(err) {
-            console.error("Could not copy text: ", err);
-        });
-        */
+    document.getElementById("ip-address").addEventListener("click", function() {
+        const textToCopy = "mc.empirewar.org";
+        navigator.clipboard.writeText(textToCopy);
+        const alertDiv = document.getElementById("alert-success");
+        alertSuccess()
     });
 });
+
+function alertSuccess() {
+    const alertDiv = document.getElementById("alert-success");
+      alertDiv.style.display = "flex";
+
+      setTimeout(function() {
+        alertDiv.style.display = "none";
+      }, 3000); // Hide after 3000 milliseconds (3 seconds)
+}
   
 
 lazyLoadBackgrounds();

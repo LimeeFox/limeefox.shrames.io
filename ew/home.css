@@ -59,6 +59,32 @@ footer {
     background-color: crimson;
 }
 
+button {
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #fff2;
+    color: white;
+}
+
+#alert-success {
+    z-index: 2000 !important;
+    width: 200px;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    left: auto;
+    animation: fadeIn 0.5s;
+}
+
+#players-online {
+    font-family: minecraftia;
+    text-align: center;
+    font-size: 25px;
+    animation: fadeIn 8s;
+}
+
 /*Slideshow + logo section*/
 #main-landing {
     position: relative;
@@ -300,6 +326,22 @@ The actual info page
 }
 */
 
+#ip-address {
+    font-size: 30px;
+    padding-top: 15px;
+    color: black;
+    width: auto;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+#ip-address img {
+    padding-bottom: 20px;
+}
+
+/* I think the two bottom thingos are deprecated (iirc I used them for listing all our IPs, which we dont do anymore) */
+
 #ip-list {
     margin-top: 6px;
 }
@@ -348,6 +390,8 @@ Navbar
 }
 
 #server-ip-button {
+    padding-top: 18px !important;
+    font-family: minecraftia;
     background-color: #3337;
     position: fixed;
     top: 65px;
@@ -394,19 +438,20 @@ Navbar
     width: 40px;
 }
 
-
-  
-#copy-button {
-    margin-left: 10px;
+.copy-button {
+    position: relative;
     cursor: pointer;
-    color: black;
+    color: white;
+    width: 70px;
+    height: 50px;
 }
 
-#alert-success {
-    position: fixed;
-    top: 0px;
-    z-index: 1000;
-    outline: black;
+#copy-button-nav {
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    width: 25px !important;
+    padding-bottom: 10px;
 }
 
 /*
