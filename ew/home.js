@@ -1,26 +1,3 @@
-/**
-window.addEventListener("scroll", function() {
-    var scrollPosition = window.pageYOffset;
-    var logo = document.getElementById("logo");
-    var backgroundSection = document.getElementById("background-section");
-
-    logo.style.transform = "translate(-50%, calc(-50% - " + (scrollPosition * 2) + "px))";
-    backgroundSection.style.transform = "translateY(" + (-scrollPosition * 0.3) + "px)"; //1.2
-
-    // Calculate opacity
-    var maxScroll = 300;
-    var opacity = 1 - (scrollPosition / maxScroll);
-
-    // Make sure opacity stays within a range of 0 and 1
-    if (opacity < 0) {
-        opacity = 0;
-    } else if (opacity > 1) {
-        opacity = 1;
-    }
-
-    logo.style.opacity = opacity;
-});
-*/
 function lazyLoadMedia() {
     var images = document.querySelectorAll('img[data-src]');
     images.forEach(function(image) {
@@ -78,7 +55,8 @@ window.addEventListener("scroll", function() {
   var scrollPosition = window.pageYOffset;
   var logo = document.getElementById("logo");
   var backgroundSection = document.getElementById("background-section");
-  var navbar = document.getElementById('navbar');  // Access the navbar
+  var navbar = document.getElementById('navbar');
+  var ipButton = document.getElementById('server-ip-button');
 
   logo.style.transform = "translate(-50%, calc(-50% - " + (scrollPosition * 2) + "px))";
   backgroundSection.style.transform = "translateY(" + (-scrollPosition * 0.3) + "px)";
@@ -86,8 +64,10 @@ window.addEventListener("scroll", function() {
   // Add the logic for the navbar
   if (scrollPosition > 80) {
       navbar.classList.add('scrolled');
+      ipButton.classList.add('scrolled');
   } else {
       navbar.classList.remove('scrolled');
+      ipButton.classList.remove('scrolled');
   }
 
   // Calculate opacity
