@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.getElementById("ip-address").addEventListener("click", function() {
-        const textToCopy = "mc.empirewar.org";
+        const textToCopy = "play.empirewar.org";
         navigator.clipboard.writeText(textToCopy);
         const alertDiv = document.getElementById("alert-success");
         alertSuccess()
