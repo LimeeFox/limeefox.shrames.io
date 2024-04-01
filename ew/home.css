@@ -149,7 +149,7 @@ iframe {
     height: 60px;
 }
 
-#news-title {
+#news-title .rank-group {
     display: flex;
     margin: 15px 0px 15px;
 }
@@ -427,6 +427,10 @@ Navbar
     background-color: #333;
 }
 
+/*
+Navbar
+*/
+
 .navbar a {
     color: black;
     text-decoration: none;
@@ -435,6 +439,10 @@ Navbar
     text-shadow: beige;
     margin-right: 15px;
     margin-left: 15px;
+}
+
+nav a.active {
+    color: beige;
 }
 
 .navbar.scrolled a {
@@ -457,6 +465,36 @@ Navbar
 #navbar-logo {
     width: 40px;
 }
+
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #1c1c1c;
+    opacity: 95%;
+}
+
+.navbar .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: transparent; /* Keep the background unchanged */
+    color: beige; /* Change text color on hover */
+}
+
+.navbar .nav-item.dropdown .dropdown-menu .dropdown-item {
+    color: darkgray; /* Default text color */
+}
+
+/*
+/ Increase specificity to ensure styles are applied /
+.navbar.scrolled .nav-item .dropdown-menu {
+    background-color: darkgray !important; / Override background color /
+    color: black !important; / Ensure text color is overridden /
+}
+
+.navbar.scrolled .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: darkgray !important; / Background color on hover /
+    color: black !important; / Text color on hover /
+}
+*/
+
+/* */
 
 .copy-button {
     position: relative;
@@ -579,4 +617,55 @@ footer {
 #join-now {
     padding: 35px 0px 35px;
     align-items: center;
+}
+
+/*
+Secondary pages
+*/
+
+.secondary-page {
+    margin-top: 50px;
+}
+
+/*
+Ranks page (separate)
+*/
+
+.ranks {
+
+}
+
+.rank {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    border-radius: 10px !important;
+    border-width: 10px !important;
+    border-color: transparent;
+    /*border-right: 10px hidden !important;*/
+}
+
+.timeline {
+    border-left: 1px solid hsl(0, 0%, 90%);
+    position: relative;
+    list-style: none;
+}
+  
+.timeline .timeline-item {
+    position: relative;
+}
+  
+.timeline .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+  
+.timeline .timeline-item:after {
+    background-color: hsl(0, 0%, 90%);
+    left: -38px;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
 }

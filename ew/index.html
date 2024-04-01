@@ -33,11 +33,19 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                         <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item"> <a class="nav-link active" href="#" class="btn btn-primary">Home</a>
+                            <li class="nav-item"> <a class="nav-link" href="#" class="btn btn-primary">Home</a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link" onclick="document.getElementById('news').scrollIntoView();">News</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" onclick="document.getElementById('about').scrollIntoView();">About</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Info
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" onclick="document.getElementById('news').scrollIntoView();">News</a></li>
+                                    <li><a class="dropdown-item" onclick="document.getElementById('about').scrollIntoView();">About</a></li>
+                                    <li><a class="dropdown-item" href="ranks.html">Ranks</a></li>
+                                    <li><a class="dropdown-item" href="">Staff</a></li>
+                                    <li><a class="dropdown-item" onclick="document.getElementById('contact').scrollIntoView();">Contact</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item"> <a class="nav-link" onclick="document.getElementById('join-now').scrollIntoView();">Join Now</a>
                             </li>
@@ -63,7 +71,7 @@
             </nav>
         </header>
 
-        <div id="main-landing">
+        <section id="main-landing">
             <div id="background-section">
                 <div id="slideshow-mask">
                     <div id="slideshow">
@@ -85,7 +93,7 @@
                     <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script><span data-playercounter-ip="mc.empirewar.org">0</span> Players Online
                 </div>
             </div>
-        </div>
+        </section>
 
         <div id="info-page" class="container">
             <div id="divider-page"></div>
@@ -98,7 +106,7 @@
             
 
             <div id="main-container" class="container">
-                <div id="news" class="info-container">
+                <section id="news" class="info-container">
                     <h1>Latest news:</h1>        
                     <div class="card col-md-6 offset-md-3">
                         <img class="card-img-top" data-src="images/2023-07-14_15.41.09.png" alt="Card image cap">
@@ -124,10 +132,10 @@
                             27.08.2023
                         </div>
                     </div>            
-                </div>
+                </section>
 
         
-                <div id="about" class="info-container">
+                <section id="about" class="info-container">
                     <div class="about-factions row">
                         <h1>About - What is Empire War?</h1>
 
@@ -217,9 +225,9 @@
                             <p class="about-factions-paragraph">Or choose to fight for the free peoples of Middle-Earth. Defend the ruins of Osgiliath, or protect the ancient Halls of Moria! Push back the assaults on Erebor or end the evil once and for all at the doorstep of Mordor at the Black Gate!</p>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="play_now" class="info-container row">
+                <section id="play_now" class="info-container row">
                     <h1>Play Empire War - Battle through Middle-Earth!</h1>
                     <div class="slider center row" id="game-images">
                         <div class="play-now-slide">
@@ -285,7 +293,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
 
@@ -303,7 +311,7 @@
                         </ul>
                         <img data-src="images/logo.png" id="footer-logo">
                     </div>                    
-                    <div class="col-md-5 footer-section">
+                    <div class="col-md-5 footer-section" id="contact">
                         <h3>Contact Us</h3>
                         <ul>
                             <li>
@@ -319,7 +327,7 @@
                     </div>
                     <div class="col-md-3 footer-section">
                         <div id="discord">
-                            <iframe data-src="https://discord.com/widget?id=209691919595470848&theme=dark" class="discord-widget"
+                            <iframe data-src="https://discord.com/widget?id=295195546119831563&theme=dark" class="discord-widget"
                                 width="100%" 
                                 height="100%"
                                 allowtransparency="true" 
@@ -331,7 +339,7 @@
                 </div>
                 <div class="row footer-bottom">
                     <div class="col-md-12">
-                        <p>© 2023 Empire War. All rights reserved.</p>
+                        <p>© 2024 Empire War. All rights reserved.</p>
                         <p style="font-size: 12px;">Unaffiliated with Mojang AB or the Microsoft Corporation.</p>
                     </div>
                 </div>

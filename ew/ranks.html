@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Empire War - Ranks</title>
+        <link rel="icon" type="image/x-icon" href="images/ew.png">
+
+        <link rel="stylesheet" href="home.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <nav id="navbar" class="navbar navbar-dark fixed-top navbar-expand-md scrolled">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/ew.png" alt="Logo" id="navbar-logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item"> <a class="nav-link" href="index.html" class="btn">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Info
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" onclick="document.getElementById('news').scrollIntoView();">News</a></li>
+                                    <li><a class="dropdown-item" onclick="document.getElementById('about').scrollIntoView();">About</a></li>
+                                    <li><a class="dropdown-item" href="ranks.html">Ranks</a></li>
+                                    <li><a class="dropdown-item" href="">Staff</a></li>
+                                    <li><a class="dropdown-item" onclick="document.getElementById('contact').scrollIntoView();">Contact</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" onclick="document.getElementById('join-now').scrollIntoView();">Join Now</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="https://forum.empirewar.org">Forums</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="https://forum.empirewar.org/pages/rules/">Rules</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="https://discord.gg/ydvVkCX">Discord</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="https://store.empirewar.org/">Donate</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="https://www.epicquestz.com/">EpicQuestz</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="info-page" class="container ranks">
+            <div class="container-fluid text-center secondary-page">    
+                <div class="row content">
+                    <div class="col-sm-2">
+                        <!-- Section: Timeline -->
+                        <section class="py-5">
+                            <ul class="timeline">
+                                <li class="timeline-item mb-5">
+                                    <h5 class="fw-bold">Default Ranks</h5>
+                                </li>
+                        
+                                <li class="timeline-item mb-5">
+                                    <h5 class="fw-bold">Donor Ranks</h5>
+                                </li>
+                        
+                                <li class="timeline-item mb-5">
+                                    <h5 class="fw-bold">Staff Ranks</h5>
+                                </li>
+
+                                <li class="timeline-item mb-5">
+                                    <h5 class="fw-bold">Roles</h5>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Section: Timeline -->
+                    </div>
+                    <div class="col-sm-8">
+                        <section class="rank-group info-container">
+                            <h1>Default Ranks:</h1>
+                            <div class="container-fluid row content">
+                                <div class="card col-md-4 offset-md-4">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title rank">Default</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                    
+                                </div>
+                            </div>
+                        </section>
+                        <section class="rank-group info-container">
+                            <h1>Staff ranks:</h1>
+                            <div class="container-fluid row content">
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title" style="color: #b32929;">Owner</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                Handles the finances of the server. The owner has the final say in every major network decision.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                    
+                                </div>
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title" style="color: #b32929;">Admin</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                The servers are run by Administrators, who are responsible for making server-wide decisions.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title" style="color: #9C5ABF;">Developper</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                Developpers handle everything on the server that contains a line of code. They program new game features such as abilities, commands, etc...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="container-fluid row content">
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title" style="color: #2aa326;">Moderator</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                Responsible for keeping the day-to-day Empire War experience as enjoyable as possible. They make sure players follow our rules and work behind the scenes on balancing classes and preparing server updates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                    
+                                </div>
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title" style="color: #1AB861;">Jr. Moderator</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                Similarly to Moderators, Jr. Moderstors are usually players who have recently been picked to join the staff team and are assisting the rest of the moderation team with their everyday tasks while also learning from them. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="card col-md-4 rank">
+                                    <div class="card-body">
+                                        <div id="card-text">
+                                            <div id="news-title">
+                                                <h3 class="card-title rank" style="color: #27aba8;">Builder</h3>
+                                            </div> 
+                                            <p class="card-text">
+                                                Responsible for all changes where building is required wether it be map updates or lobbies. The maps themselves are created by EpicQuestz, a build-team and our build server, but the Empire War Builders are able to make quick adjustments and changes directly on the PvP server.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- TODO: issue #6
+                                    <div class="card-footer">
+                                        
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-2">
+                        <p>yeet v2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container-fluid footer-container">
+                <div class="row">
+                    <div class="col-md-4 footer-section">
+                        <h3>Empire War Social</h3>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@EmpireWarSiege"><img data-src="images/youtube.ico" alt="YouTube"> YouTube</a></li>
+                            <li><a href="https://twitter.com/MCEmpireWar"><img data-src="images/twitter.ico" alt="Twitter"> Twitter</a></li>
+                            <li><a href="#"><img data-src="images/instagram.ico" alt="Instagram"> Instagram</a></li>
+                            <li><a href="https://www.planetminecraft.com/server/empire-war-1480239/"><img data-src="images/planetminecraft.ico" alt="Planet Minecraft"> Planet Minecraft</a></li>
+                            <li><a href="https://www.epicquestz.com/"><img data-src="images/epicquestz.ico" alt="EpicQuestz"> EpicQuestz</a></li>
+                        </ul>
+                        <img data-src="images/logo.png" id="footer-logo">
+                    </div>                    
+                    <div class="col-md-5 footer-section" id="contact">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <a href="mailto:info@empirewar.org">Email: info@empirewar.org</a>
+                            </li>
+                            <li>
+                                <a href="https://forum.empirewar.org/forums/reports.24/">Report a bug</a>
+                            </li>
+                            <li>
+                                <a href="https://forum.empirewar.org/members/?key=staff_members">Staff Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footer-section">
+                        <div id="discord">
+                            <iframe data-src="https://discord.com/widget?id=295195546119831563&theme=dark" class="discord-widget"
+                                width="100%" 
+                                height="100%"
+                                allowtransparency="true" 
+                                frameborder="0" 
+                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer-bottom">
+                    <div class="col-md-12">
+                        <p>© 2024 Empire War. All rights reserved.</p>
+                        <p style="font-size: 12px;">Unaffiliated with Mojang AB or the Microsoft Corporation.</p>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </body>
+</html>
