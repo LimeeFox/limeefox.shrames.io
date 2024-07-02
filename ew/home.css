@@ -5,7 +5,6 @@
     scrollbar-color: #263344 #608a81;
 }
 
-/* default image size */
 img {
     width: 100%;
     height: auto;
@@ -30,7 +29,7 @@ h2, h1 {
     src: url('fonts/Minecraftia-Regular.woff') format('woff'),
          url('fonts/Minecraftia-Regular.woff2') format('woff2'),
          url('fonts/Minecraftia-Regular.ttf') format('truetype');
-  }
+}
   
 html {
     scroll-behavior: smooth;
@@ -85,7 +84,6 @@ button:hover {
     animation: fadeIn 8s;
 }
 
-/*Slideshow + logo section*/
 #main-landing {
     position: relative;
     z-index: 1;
@@ -96,8 +94,6 @@ button:hover {
 #logo, #background-section {
     transition: transform 0.01s ease;
 }
-
-/*the actual website*/
 
 #video-section {
     margin-top: 50px;
@@ -111,7 +107,7 @@ button:hover {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    padding-bottom: 56.25%;
     width: 100%;
 }
 
@@ -122,22 +118,6 @@ button:hover {
     width: 100%;
     height: 100%;
 }
-
-
-
-iframe {
-    /*
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 700px;
-    */
-}
-
-/* The News Section */
 
 .card h3 {
     margin-left: 20px;
@@ -169,8 +149,6 @@ iframe {
     color: black;
 }
 
-/* end of news section */
-
 #info-page {
     position: relative;
     z-index: 3;
@@ -193,7 +171,6 @@ iframe {
     padding: 10vh 0%;
 }
 
-  
 #background-section {
     position: fixed;
     top: 0;
@@ -295,10 +272,6 @@ iframe {
     z-index: 3;
 }
 
-/*
-The actual info page
-*/
-
 .info-container {
     align-items: center;
     padding-top: 64px;
@@ -329,23 +302,6 @@ The actual info page
     padding: 0px;
 }
 
-/*
-#server-banner {
-    width: 460px;
-    height: auto;
-}
-*/
-
-/*
-#about-factions-good {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 350px;
-    margin-bottom: 0px;
-}
-*/
-
 #ip-address {
     font-size: 30px;
     padding-top: 15px;
@@ -364,46 +320,14 @@ The actual info page
     padding-bottom: 20px;
 }
 
-/* I think the two bottom thingos are deprecated (iirc I used them for listing all our IPs, which we dont do anymore) */
-
-#ip-list {
-    margin-top: 6px;
-}
-
-#IPs {
-    list-style-type: none;
-    text-decoration: none;
-}
-
-ul#IPs li::before {
-    content: "- ";
-}
-
-/*
-Navbar
-*/
-
-/*
 .navbar {
-    display: fixed;
-    top: 0;
-    width: 100%;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #333;
-    color: black;
-}
-*/
-
-.navbar {
-    display: fixed;
     top: 0;
     width: 100%;
     justify-content: space-between;
     padding: 10px;
     color: black;
     background-color: transparent;
-    transition: background-color 0.5s ease; /* This is for smooth transition */
+    transition: background-color 0.5s ease;
     cursor: pointer;
 }
 
@@ -414,17 +338,6 @@ Navbar
 }
 
 #server-ip-button {
-    /*padding-top: 18px !important;
-    font-family: minecraftia;
-    background-color: #3337;
-    position: fixed;
-    top: 65px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    padding: 10px;
-    z-index: 1000; /* Make sure it's above other elements */
     border: solid black;
     border-radius: 25px;
 }
@@ -432,6 +345,7 @@ Navbar
 #server-ip-button.scrolled {
     background-color: #333;
 }
+
 @keyframes glint {
     0% {
         box-shadow: 0 0 2px silver, 0 0 4px silver, 0 0 8px silver, 0 0 16px silver, 0 0 24px silver;
@@ -501,18 +415,14 @@ Navbar
     filter: invert(100);
 }
 
-/*
-Navbar
-*/
-
 .navbar a {
     color: black;
     text-decoration: none;
     font-weight: 950;
     font-size: 18px;
-    /*text-shadow: beige;*/
     margin-right: 15px;
     margin-left: 15px;
+    text-align: center; /* Align text center */
 }
 
 nav a.active {
@@ -552,28 +462,13 @@ nav a.active {
 }
 
 .navbar .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: rgba(82, 82, 82, 0.711); /* Keep the background unchanged */
-    color: white; /* Change text color on hover */
+    background-color: rgba(82, 82, 82, 0.711);
+    color: white;
 }
 
 .navbar .nav-item.dropdown .dropdown-menu .dropdown-item {
-    color: silver; /* Default text color */
+    color: silver;
 }
-
-/*
-/ Increase specificity to ensure styles are applied /
-.navbar.scrolled .nav-item .dropdown-menu {
-    background-color: darkgray !important; / Override background color /
-    color: black !important; / Ensure text color is overridden /
-}
-
-.navbar.scrolled .nav-item .dropdown-menu .dropdown-item:hover {
-    background-color: darkgray !important; / Background color on hover /
-    color: black !important; / Text color on hover /
-}
-*/
-
-/* */
 
 .copy-button {
     position: relative;
@@ -590,10 +485,6 @@ nav a.active {
     width: 25px !important;
     padding-bottom: 10px;
 }
-
-/*
-Footer
-*/
 
 footer {
     background-color: #212529;
@@ -651,7 +542,6 @@ footer {
     vertical-align: middle;
 }
 
-
 #footer-logo {
     width: 70%;
     height: auto;
@@ -659,14 +549,7 @@ footer {
 
 #discord {
     content: cover;
-
 }
-
-/*
-.slick-next, .slick-prev {
-    display: none !important;
-}
-*/
 
 .slider .slick-slide {
     opacity: 0.6;
@@ -679,8 +562,8 @@ footer {
 }
 
 .slider img {
-    width: 550px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -693,43 +576,18 @@ footer {
     padding: 35px 0px 35px;
 }
 
+#game-images .slick-slide img {
+    max-height: 400px; /* Set maximum height for images in game-images carousel on desktop */
+    object-fit: cover;
+}
+
 #join-now {
     padding: 35px 0px 35px;
     align-items: center;
 }
 
-/*
-Secondary pages
-*/
-
 .secondary-page {
     margin-top: 50px;
-}
-
-/*
-Ranks page (separate)
-*/
-
-.ranks {
-
-}
-
-.rank {
-    text-align: center;
-    position: relative;
-    align-items: center;
-    box-sizing:content-box;
-    /*border-radius: 10px !important;
-    border-width: 10px !important;
-    border-color: transparent;*/
-    /*margin: 6px;
-    box-sizing: calc(size - 5px);
-    */
-    /*border-right: 10px hidden !important;*/
-}
-
-.rank-card {
-    background-color: #1c1c1c;
 }
 
 .timeline {
@@ -757,9 +615,6 @@ Ranks page (separate)
     content: "";
 }
 
-/* mobile stuff */
-
-/* General mobile styles */
 @media (max-width: 767px) {
     .navbar {
         padding: 5px;
@@ -774,9 +629,22 @@ Ranks page (separate)
         font-size: 16px;
     }
 
+    #navbar-logo {
+        width: 30px;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+    }
+
+    .dropdown-menu {
+        font-size: 14px;
+    }
+
     #logo .logo {
         width: 100%;
         height: auto;
+        max-width: 300px;
     }
 
     #video-section {
@@ -784,7 +652,7 @@ Ranks page (separate)
     }
 
     .video-container {
-        padding-bottom: 75%; /* Adjusted for a better fit on smaller screens */
+        padding-bottom: 75%;
     }
 
     #info-page {
@@ -807,18 +675,21 @@ Ranks page (separate)
 
     .carousel-inner img {
         height: auto;
-        object-fit: cover;
         width: 100%;
+        max-width: 100%;
+        max-height: 200px; /* Ensuring carousel images fit within the screen */
     }
 
     .slider img {
         width: 100%;
         height: auto;
+        max-width: 100%;
     }
 
     .play-now-slide img {
         width: 100%;
         height: auto;
+        max-width: 100%;
     }
 
     .footer-container {
@@ -839,18 +710,6 @@ Ranks page (separate)
         height: 200px;
     }
 
-    #navbar-logo {
-        width: 30px;
-    }
-
-    .navbar-toggler {
-        padding: 0.25rem 0.75rem;
-    }
-
-    .dropdown-menu {
-        font-size: 14px;
-    }
-
     .card {
         width: 90%;
         margin: 10px auto;
@@ -858,10 +717,40 @@ Ranks page (separate)
 
     .card-img-top {
         height: auto;
+        max-width: 100%;
     }
 
-    .carousel-inner img {
-        height: auto;
+    .navbar .nav-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-inner .carousel-item {
+        max-height: 200px; /* Adjusted max height for carousel items */
+    }
+
+    .about-factions {
+        flex-direction: column;
+    }
+
+    .about-factions .col-md-6 {
         width: 100%;
+        padding: 10px 0;
+    }
+
+    #server-ip-button {
+        text-align: center; /* Center align the text in the server IP button */
+    }
+
+    #server-banner {
+        width: 100%; /* Ensuring the GIF image fits within the screen */
+        height: auto;
+        max-width: 100%;
+        margin: 10px 0; /* Adding margin to separate it from the text */
+    }
+
+    #game-images .slick-slide img {
+        max-height: 150px; /* Ensure images in game-images carousel fit within the screen on mobile */
+        object-fit: cover;
     }
 }
