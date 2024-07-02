@@ -149,7 +149,7 @@ iframe {
     height: 60px;
 }
 
-#news-title .rank-group {
+#news-title .rank-group .rank-title {
     display: flex;
     margin: 15px 0px 15px;
 }
@@ -410,7 +410,7 @@ Navbar
 }
 
 #server-ip-button {
-    padding-top: 18px !important;
+    /*padding-top: 18px !important;
     font-family: minecraftia;
     background-color: #3337;
     position: fixed;
@@ -421,6 +421,8 @@ Navbar
     color: white;
     padding: 10px;
     z-index: 1000; /* Make sure it's above other elements */
+    border: solid black;
+    border-radius: 25px;
 }
 
 #server-ip-button.scrolled {
@@ -436,26 +438,31 @@ Navbar
     text-decoration: none;
     font-weight: 950;
     font-size: 18px;
-    text-shadow: beige;
+    /*text-shadow: beige;*/
     margin-right: 15px;
     margin-left: 15px;
 }
 
 nav a.active {
-    color: beige;
+    background-color: rgb(50, 50, 50);
 }
 
 .navbar.scrolled a {
-    color: darkgray;
+    color: silver;
+}
+
+.navbar.scrolled img {
+    filter: invert(80%);
 }
 
 .navbar a:hover {
-    color: beige;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.643);
     text-decoration: underline;
 }
 
 .navbar.scrolled a:hover {
-    color: beige;
+    background-color: rgba(82, 82, 82, 0.711);
 }
 
 .navbar a:first-child {
@@ -473,12 +480,12 @@ nav a.active {
 }
 
 .navbar .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: transparent; /* Keep the background unchanged */
-    color: beige; /* Change text color on hover */
+    background-color: rgba(82, 82, 82, 0.711); /* Keep the background unchanged */
+    color: white; /* Change text color on hover */
 }
 
 .navbar .nav-item.dropdown .dropdown-menu .dropdown-item {
-    color: darkgray; /* Default text color */
+    color: silver; /* Default text color */
 }
 
 /*
@@ -639,10 +646,18 @@ Ranks page (separate)
     text-align: center;
     position: relative;
     align-items: center;
-    border-radius: 10px !important;
+    box-sizing:content-box;
+    /*border-radius: 10px !important;
     border-width: 10px !important;
-    border-color: transparent;
+    border-color: transparent;*/
+    /*margin: 6px;
+    box-sizing: calc(size - 5px);
+    */
     /*border-right: 10px hidden !important;*/
+}
+
+.rank-card {
+    background-color: #1c1c1c;
 }
 
 .timeline {
