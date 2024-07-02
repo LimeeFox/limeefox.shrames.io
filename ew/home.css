@@ -756,3 +756,112 @@ Ranks page (separate)
     width: 11px;
     content: "";
 }
+
+/* mobile stuff */
+
+/* General mobile styles */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .navbar .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navbar .nav-link {
+        font-size: 16px;
+    }
+
+    #logo .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    #video-section {
+        height: auto;
+    }
+
+    .video-container {
+        padding-bottom: 75%; /* Adjusted for a better fit on smaller screens */
+    }
+
+    #info-page {
+        padding: 20px;
+    }
+
+    #main-container {
+        padding: 5vh 5%;
+    }
+
+    .info-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .about-factions-paragraph {
+        font-size: 100%;
+        line-height: 140%;
+    }
+
+    .carousel-inner img {
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    .play-now-slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        max-width: 90%;
+        padding: 0 5px;
+    }
+
+    .footer-section {
+        margin-bottom: 10px;
+        line-height: 180%;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 10px;
+    }
+
+    .discord-widget {
+        height: 200px;
+    }
+
+    #navbar-logo {
+        width: 30px;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+    }
+
+    .dropdown-menu {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card-img-top {
+        height: auto;
+    }
+
+    .carousel-inner img {
+        height: auto;
+        width: 100%;
+    }
+}
