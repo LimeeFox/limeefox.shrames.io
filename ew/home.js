@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let alertVisible = false;
 
     document.getElementById("server-ip-button").addEventListener("click", function() {
-        const textToCopy = "mc.empirewar.org";
+        const textToCopy = "play.empirewar.org";
         navigator.clipboard.writeText(textToCopy);
         alertSuccess();
     });

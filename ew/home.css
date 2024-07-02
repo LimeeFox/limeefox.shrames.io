@@ -527,13 +527,13 @@ nav a.active {
     filter: invert(80%);
 }
 
-.navbar a:hover {
+.navbar a:hover:not(.navbar-brand) {
     color: white;
     background-color: rgba(50, 50, 50, 0.643);
     text-decoration: underline;
 }
 
-.navbar.scrolled a:hover {
+.navbar.scrolled a:hover:not(#nav-logo) {
     background-color: rgba(82, 82, 82, 0.711);
 }
 
