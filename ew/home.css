@@ -444,6 +444,10 @@ nav a.active {
     filter: invert(80%);
 }
 
+.navbar:not(.scrolled) .nav-item:hover img:not(#navbar-logo) {
+    filter: invert(100%);
+}
+
 .navbar a:hover:not(.navbar-brand) {
     color: white;
     background-color: rgba(50, 50, 50, 0.643);
