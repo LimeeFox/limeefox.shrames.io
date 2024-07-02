@@ -356,6 +356,10 @@ The actual info page
     margin: auto;
 }
 
+#ip-address:hover {
+    color: white;
+}
+
 #ip-address img {
     padding-bottom: 20px;
 }
@@ -428,6 +432,74 @@ Navbar
 #server-ip-button.scrolled {
     background-color: #333;
 }
+@keyframes glint {
+    0% {
+        box-shadow: 0 0 2px silver, 0 0 4px silver, 0 0 8px silver, 0 0 16px silver, 0 0 24px silver;
+    }
+    10% {
+        box-shadow: 0 0 3px silver, 0 0 6px silver, 0 0 12px silver, 0 0 24px silver, 0 0 36px silver;
+    }
+    20% {
+        box-shadow: 0 0 4px silver, 0 0 8px silver, 0 0 16px silver, 0 0 32px silver, 0 0 48px silver;
+    }
+    30% {
+        box-shadow: 0 0 5px silver, 0 0 10px silver, 0 0 20px silver, 0 0 40px silver, 0 0 60px silver;
+    }
+    40% {
+        box-shadow: 0 0 6px silver, 0 0 12px silver, 0 0 24px silver, 0 0 48px silver, 0 0 72px silver;
+    }
+    50% {
+        box-shadow: 0 0 7px silver, 0 0 14px silver, 0 0 28px silver, 0 0 56px silver, 0 0 84px silver;
+    }
+    60% {
+        box-shadow: 0 0 6px silver, 0 0 12px silver, 0 0 24px silver, 0 0 48px silver, 0 0 72px silver;
+    }
+    70% {
+        box-shadow: 0 0 5px silver, 0 0 10px silver, 0 0 20px silver, 0 0 40px silver, 0 0 60px silver;
+    }
+    80% {
+        box-shadow: 0 0 4px silver, 0 0 8px silver, 0 0 16px silver, 0 0 32px silver, 0 0 48px silver;
+    }
+    90% {
+        box-shadow: 0 0 3px silver, 0 0 6px silver, 0 0 12px silver, 0 0 24px silver, 0 0 36px silver;
+    }
+    100% {
+        box-shadow: 0 0 2px silver, 0 0 4px silver, 0 0 8px silver, 0 0 16px silver, 0 0 24px silver;
+    }
+}
+
+@keyframes glint-hover {
+    0% {
+        box-shadow: 0 0 2px darkgoldenrod, 0 0 4px gold, 0 0 8px darkgoldenrod, 0 0 16px gold, 0 0 24px darkgoldenrod;
+    }
+    25% {
+        box-shadow: 0 0 4px gold, 0 0 8px darkgoldenrod, 0 0 16px gold, 0 0 32px darkgoldenrod, 0 0 48px gold;
+    }
+    50% {
+        box-shadow: 0 0 6px darkgoldenrod, 0 0 12px gold, 0 0 24px darkgoldenrod, 0 0 48px gold, 0 0 72px darkgoldenrod;
+    }
+    75% {
+        box-shadow: 0 0 4px gold, 0 0 8px darkgoldenrod, 0 0 16px gold, 0 0 32px darkgoldenrod, 0 0 48px gold;
+    }
+    100% {
+        box-shadow: 0 0 2px darkgoldenrod, 0 0 4px gold, 0 0 8px darkgoldenrod, 0 0 16px gold, 0 0 24px darkgoldenrod;
+    }
+}
+
+#ip-address {
+    animation: glint 6s infinite;
+    color: black;
+    cursor: pointer;
+}
+
+#ip-address:hover {
+    color: white;
+    animation: glint-hover 2s infinite;
+}
+
+#ip-address:hover img {
+    filter: invert(100);
+}
 
 /*
 Navbar
@@ -451,7 +523,7 @@ nav a.active {
     color: silver;
 }
 
-.navbar.scrolled img {
+.navbar.scrolled img:not(#navbar-logo) {
     filter: invert(80%);
 }
 
@@ -511,7 +583,7 @@ nav a.active {
     height: 50px;
 }
 
-#copy-button-nav {
+#copy-button {
     margin-left: 10px;
     cursor: pointer;
     color: white;
