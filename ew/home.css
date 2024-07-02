@@ -303,13 +303,20 @@ button:hover {
 }
 
 #ip-address {
-    font-size: 30px;
-    padding-top: 15px;
-    color: black;
-    width: auto;
-    position: relative;
-    display: block;
-    margin: auto;
+    font-size: 2vw; /* Dynamic font size based on viewport width */
+    padding: 1vw; /* Dynamic padding based on viewport width */
+    word-wrap: break-word; /* Ensure text wraps within the container */
+    text-align: center; /* Center align the text */
+    overflow: hidden; /* Prevent overflow */
+    max-width: 90%; /* Ensure it stays within bounds */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto; /* Center the element */
+    padding-top: 5%;
+}
+
+/* Ensuring the container of #ip-address is also responsive */
+.info-container {
+    padding: 1vw; /* Dynamic padding based on viewport width */
 }
 
 #ip-address:hover {
@@ -746,11 +753,21 @@ footer {
         width: 100%; /* Ensuring the GIF image fits within the screen */
         height: auto;
         max-width: 100%;
-        margin: 10px 0; /* Adding margin to separate it from the text */
+        margin: 30px 0; /* Adding margin to separate it from the text */
     }
 
     #game-images .slick-slide img {
         max-height: 150px; /* Ensure images in game-images carousel fit within the screen on mobile */
         object-fit: cover;
+    }
+
+    #ip-address {
+        font-size: 30px; /* Adjust font size for better fit */
+        padding: 10px; /* Add padding for better spacing */
+        word-wrap: break-word; /* Ensure text wraps within the container */
+        text-align: center; /* Center align the text */
+        overflow: hidden; /* Prevent overflow */
+        width: 100%; /* Ensure it spans the width of the container */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 }
