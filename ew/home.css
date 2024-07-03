@@ -158,7 +158,7 @@ button:hover {
     flex-direction: column;
     min-width: 100%;
     width: 100%;
-    padding: 0px;
+    padding: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/stone.png');
     background-repeat: repeat;
     background-size: 64px;
@@ -667,7 +667,7 @@ footer {
     }
 
     #info-page {
-        padding: 20px;
+        /*padding: 20px;*/
     }
 
     #main-container {
@@ -773,5 +773,10 @@ footer {
         overflow: hidden; /* Prevent overflow */
         width: 100%; /* Ensure it spans the width of the container */
         box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    #divider-page {
+        background-size: 64px 64px; /* Adjusting the size to match mobile scaling */
+        /*width: 120%;*/
     }
 }
