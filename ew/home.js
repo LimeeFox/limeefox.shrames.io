@@ -280,7 +280,15 @@ function alertSuccess() {
         alertDiv.style.display = "none";
       }, 3000); // Hide after 3000 milliseconds (3 seconds)
 }
-  
+
+document.querySelectorAll('img').forEach(img => {
+    if (!img.hasAttribute('width')) {
+        img.setAttribute('width', img.naturalWidth);
+    }
+    if (!img.hasAttribute('height')) {
+        img.setAttribute('height', img.naturalHeight);
+    }
+});
 
 lazyLoadBackgrounds();
 
