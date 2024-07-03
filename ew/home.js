@@ -139,17 +139,23 @@ function setActiveLink() {
 
 // Define the setActiveLink function separately
 function setActiveLink() {
-  const sections = document.querySelectorAll('section');
-  const links = document.querySelectorAll('nav a');
-
-  sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          links.forEach(link => link.classList.remove('active'));
-          links[index].classList.add('active');
-      }
-  });
-}
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('nav a');
+  
+    sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            links.forEach(link => {
+                if (link.id !== 'nav-logo') {
+                    link.classList.remove('active');
+                }
+            });
+            if (links[index].id !== 'nav-logo') {
+                links[index].classList.add('active');
+            }
+        }
+    });
+  }
 
 // Add a scroll event listener to check the active section on scroll
 window.addEventListener('scroll', setActiveLink);
