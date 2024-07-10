@@ -1,36 +1,3 @@
-/*
-function lazyLoadMedia() {
-    var images = document.querySelectorAll('img[data-src]');
-    images.forEach(function(image) {
-      var rect = image.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        var src = image.getAttribute('data-src');
-        if (src) {
-          image.src = src;
-          image.removeAttribute('data-src');
-        }
-      }
-    });
-
-    // Lazy load iframes
-    var iframes = document.querySelectorAll('iframe[data-src]');
-    iframes.forEach(function(iframe) {
-        var rect = iframe.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        var src = iframe.getAttribute('data-src');
-        if (src) {
-            iframe.src = src;
-            iframe.removeAttribute('data-src');
-      }
-    }
-  });
-  }
-  */
-
-document.addEventListener('DOMContentLoaded', () => {
-    lazyLoadMedia();
-});
-
 function lazyLoadMedia() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -39,11 +6,7 @@ function lazyLoadMedia() {
                 const src = media.getAttribute('data-src');
                 if (src) {
                     media.src = src;
-                    media.onload = () => console.log('Media loaded successfully');
-                    media.onerror = () => {
-                        console.log('Error loading media. Replacing with placeholder.');
-                        media.src = 'images/error-placeholder.png';
-                    };
+                    media.onerror = () => console.log('Error loading media.');
                     media.removeAttribute('data-src');
                     observer.unobserve(media);
                 }
@@ -56,6 +19,7 @@ function lazyLoadMedia() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', lazyLoadMedia);
 
 var totalSlides = document.querySelectorAll('.background_slide').length;
 var currentSlideIndex = 0;
@@ -82,60 +46,6 @@ function lazyLoadBackgrounds() {
     // Update current slide index
     currentSlideIndex = nextSlideIndex;
 }
-
-/*
-window.addEventListener("scroll", function() {
-  var scrollPosition = window.pageYOffset;
-  var logo = document.getElementById("logo");
-  var backgroundSection = document.getElementById("background-section");
-  var navbar = document.getElementById('navbar');
-  var ipButton = document.getElementById('server-ip-button');
-
-  logo.style.transform = "translate(-50%, calc(-50% - " + (scrollPosition * 2) + "px))";
-  backgroundSection.style.transform = "translateY(" + (-scrollPosition * 0.3) + "px)";
-
-  // Add the logic for the navbar
-  if (scrollPosition > 80) {
-      navbar.classList.add('scrolled');
-      ipButton.classList.add('scrolled');
-  } else {
-      navbar.classList.remove('scrolled');
-      ipButton.classList.remove('scrolled');
-  }
-
-  // Calculate opacity
-  var maxScroll = 300;
-  var opacity = 1 - (scrollPosition / maxScroll);
-
-  // Make sure opacity stays within a range of 0 and 1
-  if (opacity < 0) {
-      opacity = 0;
-  } else if (opacity > 1) {
-      opacity = 1;
-  }
-
-  // Highlight buttons in navbar
-  setActiveLink()
-  
-  logo.style.opacity = opacity;
-
-  // Load pictures progressively
-  lazyLoadMedia();
-});
-
-function setActiveLink() {
-  const sections = document.querySelectorAll('section');
-  const links = document.querySelectorAll('nav a');
-
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        navLinks[index].classList.add('active');
-    }
-  });
-}
-*/
 
 // Define the setActiveLink function separately
 function setActiveLink() {
@@ -296,7 +206,7 @@ document.querySelectorAll('img').forEach(img => {
     }
 });
 
-lazyLoadBackgrounds();
+//lazyLoadBackgrounds();
 
-setInterval(lazyLoadBackgrounds, 4000);
+//setInterval(lazyLoadBackgrounds, 4000);
 setTimeout(clearInterval, 33000)
